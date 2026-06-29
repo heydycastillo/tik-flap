@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tik-Flap </title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ======== FONDO DECORATIVO ======== -->
+  <div class="bg-decoration" aria-hidden="true">
+    <span class="paw"></span>
+    <span class="paw"></span>
+    <span class="paw"></span>
+    <span class="paw"></span>
+    <span class="paw"></span>
+    <span class="paw"></span>
+    <span class="star">⭐</span>
+    <span class="star">✨</span>
+    <span class="star">⭐</span>
+    <span class="star">✨</span>
+  </div>
+
+  <!-- ======== PANTALLA 1: MENÚ PRINCIPAL ======== -->
+  <section id="pantalla-menu" class="pantalla activa">
+    <div class="menu-container">
+      <div class="logo-block">
+        <div class="cat-icon" aria-hidden="true">😸</div>
+        <h1 class="logo-title">Tik-Flap</h1>
+        <p class="logo-subtitle">Tres en Raya · Teoría de la Computación</p>
+      </div>
+
+      <nav class="menu-buttons" role="navigation" aria-label="Menú principal">
+        <button class="btn btn-primary" id="btn-jugar">
+          <span class="btn-icon"></span> Jugar
+        </button>
+        <button class="btn btn-secondary" id="btn-reglas">
+          <span class="btn-icon"></span> Reglas
+        </button>
+        <button class="btn btn-secondary" id="btn-creditos">
+          <span class="btn-icon"></span> Créditos
+        </button>
+        <button class="btn btn-outline" id="btn-salir">
+          <span class="btn-icon"></span> Salir
+        </button>
+      </nav>
+
+      <div class="menu-cats" aria-hidden="true">
+        <span class="deco-cat left"></span>
+        <span class="deco-cat right"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PANTALLA 2: INGRESO DE JUGADORES ======== -->
+  <section id="pantalla-jugadores" class="pantalla">
+    <div class="card jugadores-card">
+      <button class="btn-back" id="btn-back-menu" aria-label="Volver al menú">← Volver</button>
+      <h2 class="card-title">¿Quiénes juegan? </h2>
+
+      <div class="player-input-group">
+        <label class="player-label" for="input-j1">
+          <span class="player-symbol x-symbol">✕</span>
+          Jugador 1
+        </label>
+        <input
+          type="text"
+          id="input-j1"
+          class="player-input"
+          placeholder="Ingresa tu nombre..."
+          maxlength="20"
+          autocomplete="off"
+        />
+        <span class="input-error" id="error-j1" role="alert"></span>
+      </div>
+
+      <div class="player-input-group">
+        <label class="player-label" for="input-j2">
+          <span class="player-symbol o-symbol">〇</span>
+          Jugador 2
+        </label>
+        <input
+          type="text"
+          id="input-j2"
+          class="player-input"
+          placeholder="Ingresa tu nombre..."
+          maxlength="20"
+          autocomplete="off"
+        />
+        <span class="input-error" id="error-j2" role="alert"></span>
+      </div>
+
+      <button class="btn btn-primary btn-full" id="btn-comenzar">
+         Comenzar partida
+      </button>
+    </div>
+  </section>
+
+  <!-- ======== PANTALLA 3: JUEGO ======== -->
+  <section id="pantalla-juego" class="pantalla">
+    <div class="game-layout">
+
+      <!-- Panel izquierdo: jugador 1 -->
+      <aside class="player-panel panel-left" id="panel-j1">
+        <div class="player-avatar x-avatar">✕</div>
+        <p class="player-name" id="nombre-j1">Jugador 1</p>
+        <div class="player-stats">
+          <div class="stat-badge correct-badge">
+            <span class="stat-number" id="stat-correctas-j1">0</span>
+            <span class="stat-label">✓ correctas</span>
+          </div>
+          <div class="stat-badge wrong-badge">
+            <span class="stat-number" id="stat-incorrectas-j1">0</span>
+            <span class="stat-label">✗ incorrectas</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Centro: tablero -->
+      <main class="game-center">
+        <div class="turn-indicator" id="turn-indicator" role="status" aria-live="polite">
+          <span id="turn-text">Turno de <strong id="turn-name">...</strong></span>
+        </div>
+
+        <div class="board" id="tablero" role="grid" aria-label="Tablero de juego">
+          <!-- 9 celdas generadas por JS -->
+        </div>
+
+        <div class="game-controls">
+          <button class="btn btn-sm btn-secondary" id="btn-reiniciar"> Reiniciar</button>
+          <button class="btn btn-sm btn-outline" id="btn-menu-juego"> Menú</button>
+        </div>
+      </main>
+
+      <!-- Panel derecho: jugador 2 -->
+      <aside class="player-panel panel-right" id="panel-j2">
+        <div class="player-avatar o-avatar">〇</div>
+        <p class="player-name" id="nombre-j2">Jugador 2</p>
+        <div class="player-stats">
+          <div class="stat-badge correct-badge">
+            <span class="stat-number" id="stat-correctas-j2">0</span>
+            <span class="stat-label">✓ correctas</span>
+          </div>
+          <div class="stat-badge wrong-badge">
+            <span class="stat-number" id="stat-incorrectas-j2">0</span>
+            <span class="stat-label">✗ incorrectas</span>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ======== PANTALLA 4: RESULTADO FINAL ======== -->
+  <section id="pantalla-resultado" class="pantalla">
+    <div class="card resultado-card">
+      <div class="result-emoji" id="result-emoji" aria-hidden="true">🏆</div>
+      <h2 class="result-title" id="result-title">¡Tenemos un ganador!</h2>
+      <p class="result-winner" id="result-winner">Nombre del ganador</p>
+
+      <div class="result-stats">
+        <div class="result-stat">
+          <span class="stat-big" id="res-correctas">0</span>
+          <span class="stat-label">Respuestas correctas</span>
+        </div>
+        <div class="result-stat">
+          <span class="stat-big" id="res-incorrectas">0</span>
+          <span class="stat-label">Respuestas incorrectas</span>
+        </div>
+      </div>
+
+      <div class="result-buttons">
+        <button class="btn btn-primary" id="btn-jugar-nuevamente"> Jugar nuevamente</button>
+        <button class="btn btn-outline" id="btn-menu-resultado"> Volver al menú</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== MODAL: PREGUNTA ======== -->
+  <div id="modal-pregunta" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-tema" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <span class="modal-cat" aria-hidden="true"></span>
+        <span class="modal-tema" id="modal-tema">Tema</span>
+      </div>
+
+      <p class="modal-pregunta" id="modal-pregunta-texto">¿Pregunta?</p>
+
+      <div class="opciones-grid" id="opciones-grid" role="radiogroup" aria-label="Opciones de respuesta">
+        <!-- opciones generadas por JS -->
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="btn-responder" disabled>✔ Responder</button>
+        <button class="btn btn-outline" id="btn-cancelar">✖ Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== MODAL: REGLAS ======== -->
+  <div id="modal-reglas" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="reglas-title" hidden>
+    <div class="modal-card modal-info">
+      <h3 class="modal-info-title" id="reglas-title">📖 Reglas del juego</h3>
+      <ul class="rules-list">
+        <li> Dos jugadores se turnan para marcar casillas en un tablero 3×3.</li>
+        <li> Al hacer clic en una casilla, aparecerá una pregunta de Teoría de la Computación.</li>
+        <li> Si respondes correctamente, colocas tu ficha (✕ u 〇) en esa casilla.</li>
+        <li> Si fallas, pierdes el turno y la casilla queda libre.</li>
+        <li> Gana quien logre alinear 3 fichas en fila, columna o diagonal.</li>
+        <li> Si se llenan todas las casillas sin ganador, es empate.</li>
+      </ul>
+      <button class="btn btn-primary btn-full" id="btn-cerrar-reglas">¡Entendido! </button>
+    </div>
+  </div>
+
+  <!-- ======== MODAL: CRÉDITOS ======== -->
+  <div id="modal-creditos" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="creditos-title" hidden>
+    <div class="modal-card modal-info">
+      <h3 class="modal-info-title" id="creditos-title"> Créditos</h3>
+      <div class="creditos-body">
+        <p class="creditos-cat" aria-hidden="true"></p>
+        <p><strong>Tik-Flap</strong></p>
+        <p>Proyecto final · Teoría de la Computación</p>
+        <br/>
+        <p>Desarrollado con HTML, CSS y JavaScript puro.</p>
+        <p>Heydy castillo· Angelica Huaman</p>
+        <br/>
+        <p> Hecho con mucho amor felino </p>
+      </div>
+      <button class="btn btn-primary btn-full" id="btn-cerrar-creditos">¡Gracias! 💜</button>
+    </div>
+  </div>
+
+  <!-- ======== TOAST NOTIFICACIÓN ======== -->
+  <div id="toast" class="toast" role="alert" aria-live="assertive" aria-hidden="true"></div>
+
+  <!-- Scripts -->
+  <script src="preguntas.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
