@@ -1,21 +1,17 @@
 /**
- * preguntas.js — Banco de preguntas para Tik-Flap
- * Curso: Teoría de la Computación
- * Total: 100 preguntas · 5 temas · 20 por tema
- *
+ 
  * Temas:
  *  1. Máquina de Turing (básico)
- *  2. Padre de la Programación
+ *  2. Historia de Computacion
  *  3. AFD y AFND
  *  4. Lenguajes y Jerarquía de Chomsky
  *  5. Transformaciones entre AFD y AFND
+ *  6. Autoamta de pila
  */
 
 const BANCO_PREGUNTAS = [
 
-  // ══════════════════════════════════════════════
   // TEMA 1: Máquina de Turing (básico)
-  // ══════════════════════════════════════════════
   {
     tema: "Máquina de Turing",
     pregunta: "¿Qué es una Máquina de Turing?",
@@ -70,17 +66,6 @@ const BANCO_PREGUNTAS = [
       "Ninguna, usa memoria interna"
     ],
     correcta: 2
-  },
-  {
-    tema: "Máquina de Turing",
-    pregunta: "¿Qué símbolo especial representa el espacio en blanco en la cinta?",
-    opciones: [
-      "El símbolo $",
-      "El símbolo B o □ (blank)",
-      "El símbolo 0",
-      "El símbolo #"
-    ],
-    correcta: 1
   },
   {
     tema: "Máquina de Turing",
@@ -237,11 +222,10 @@ const BANCO_PREGUNTAS = [
     correcta: 1
   },
 
-  // ══════════════════════════════════════════════
-  // TEMA 2: Padre de la Programación
-  // ══════════════════════════════════════════════
+
+  // TEMA 2: Historia de Computacion
   {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "¿Quién es considerada la primera programadora de la historia?",
     opciones: [
       "Grace Hopper",
@@ -252,7 +236,7 @@ const BANCO_PREGUNTAS = [
     correcta: 1
   },
   {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "Ada Lovelace escribió el primer algoritmo para:",
     opciones: [
       "La computadora ENIAC",
@@ -263,7 +247,7 @@ const BANCO_PREGUNTAS = [
     correcta: 1
   },
   {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "¿Quién diseñó la Máquina Analítica, considerada precursora de las computadoras modernas?",
     opciones: [
       "Alan Turing",
@@ -274,7 +258,7 @@ const BANCO_PREGUNTAS = [
     correcta: 2
   },
   {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "¿Qué lenguaje de programación fue nombrado en honor a Ada Lovelace?",
     opciones: [
       "COBOL",
@@ -285,7 +269,7 @@ const BANCO_PREGUNTAS = [
     correcta: 1
   },
   {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "Grace Hopper es famosa por crear:",
     opciones: [
       "El lenguaje C",
@@ -296,7 +280,7 @@ const BANCO_PREGUNTAS = [
     correcta: 1
   },
   {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "¿Quién es conocido como el padre de la programación estructurada?",
     opciones: [
       "Dennis Ritchie",
@@ -307,7 +291,7 @@ const BANCO_PREGUNTAS = [
     correcta: 1
   },
   {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "¿Qué aportó John von Neumann al mundo de la computación?",
     opciones: [
       "El lenguaje ensamblador",
@@ -318,7 +302,7 @@ const BANCO_PREGUNTAS = [
     correcta: 1
   },
   {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "El lenguaje FORTRAN, uno de los primeros lenguajes de alto nivel, fue creado por:",
     opciones: [
       "Grace Hopper",
@@ -329,7 +313,7 @@ const BANCO_PREGUNTAS = [
     correcta: 1
   },
   {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "¿Quién desarrolló el lenguaje C?",
     opciones: [
       "Brian Kernighan solo",
@@ -340,7 +324,7 @@ const BANCO_PREGUNTAS = [
     correcta: 2
   },
   {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "El concepto de 'bug' en programación fue popularizado por:",
     opciones: [
       "Alan Turing",
@@ -351,7 +335,7 @@ const BANCO_PREGUNTAS = [
     correcta: 1
   },
   {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "¿Quién creó el lenguaje Pascal?",
     opciones: [
       "Ada Lovelace",
@@ -362,7 +346,7 @@ const BANCO_PREGUNTAS = [
     correcta: 2
   },
   {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "Alan Turing propuso en 1950 una prueba para determinar si una máquina puede pensar. ¿Cómo se llama?",
     opciones: [
       "La prueba de Turing",
@@ -373,7 +357,7 @@ const BANCO_PREGUNTAS = [
     correcta: 0
   },
   {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "¿Cuál fue uno de los primeros lenguajes de programación de alto nivel?",
     opciones: [
       "Python",
@@ -384,29 +368,7 @@ const BANCO_PREGUNTAS = [
     correcta: 2
   },
   {
-    tema: "Padre de la Programación",
-    pregunta: "Donald Knuth es reconocido principalmente por:",
-    opciones: [
-      "Inventar Internet",
-      "Escribir 'The Art of Computer Programming' y crear TeX",
-      "Crear el lenguaje Java",
-      "Diseñar el microprocesador Intel"
-    ],
-    correcta: 1
-  },
-  {
-    tema: "Padre de la Programación",
-    pregunta: "¿En qué siglo vivió Ada Lovelace?",
-    opciones: [
-      "Siglo XVIII",
-      "Siglo XIX",
-      "Siglo XX",
-      "Siglo XVII"
-    ],
-    correcta: 1
-  },
-  {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "Bjarne Stroustrup es conocido por crear:",
     opciones: [
       "Python",
@@ -417,7 +379,7 @@ const BANCO_PREGUNTAS = [
     correcta: 1
   },
   {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "¿Quién desarrolló el sistema operativo Unix?",
     opciones: [
       "Bill Gates y Paul Allen",
@@ -428,29 +390,7 @@ const BANCO_PREGUNTAS = [
     correcta: 1
   },
   {
-    tema: "Padre de la Programación",
-    pregunta: "El Premio Turing es considerado el equivalente del Nobel en informática. ¿Quién lo otorga?",
-    opciones: [
-      "La Universidad de Cambridge",
-      "La ACM (Association for Computing Machinery)",
-      "El MIT",
-      "IEEE"
-    ],
-    correcta: 1
-  },
-  {
-    tema: "Padre de la Programación",
-    pregunta: "¿Qué hizo especial el trabajo de Ada Lovelace con la Máquina Analítica?",
-    opciones: [
-      "Construyó la máquina físicamente",
-      "Describió cómo podría usarse para calcular números de Bernoulli, considerado el primer algoritmo",
-      "Programó la primera inteligencia artificial",
-      "Inventó el lenguaje binario"
-    ],
-    correcta: 1
-  },
-  {
-    tema: "Padre de la Programación",
+    tema: "Historia de Computacion",
     pregunta: "¿Qué significa 'programación estructurada'?",
     opciones: [
       "Programar sin errores",
@@ -461,9 +401,8 @@ const BANCO_PREGUNTAS = [
     correcta: 1
   },
 
-  // ══════════════════════════════════════════════
+
   // TEMA 3: AFD y AFND
-  // ══════════════════════════════════════════════
   {
     tema: "AFD y AFND",
     pregunta: "¿Qué significa AFD?",
@@ -631,28 +570,6 @@ const BANCO_PREGUNTAS = [
   },
   {
     tema: "AFD y AFND",
-    pregunta: "¿Qué es la cerradura épsilon (ε-clausura) de un estado en un AFND?",
-    opciones: [
-      "El conjunto de estados accesibles usando solo transiciones ε sin leer ningún símbolo",
-      "El conjunto de todos los estados del autómata",
-      "El estado inicial del autómata",
-      "El conjunto de estados de aceptación"
-    ],
-    correcta: 0
-  },
-  {
-    tema: "AFD y AFND",
-    pregunta: "Un AFND-ε es un AFND que:",
-    opciones: [
-      "No tiene estados de aceptación",
-      "Admite transiciones sin leer símbolo (transiciones vacías)",
-      "Solo acepta la cadena vacía",
-      "Tiene alfabeto de un solo símbolo"
-    ],
-    correcta: 1
-  },
-  {
-    tema: "AFD y AFND",
     pregunta: "¿Cuántos estados puede tener un autómata finito?",
     opciones: [
       "Exactamente dos: inicial y final",
@@ -685,9 +602,8 @@ const BANCO_PREGUNTAS = [
     correcta: 1
   },
 
-  // ══════════════════════════════════════════════
+
   // TEMA 4: Lenguajes y Jerarquía de Chomsky
-  // ══════════════════════════════════════════════
   {
     tema: "Lenguajes y Jerarquía de Chomsky",
     pregunta: "¿Quién propuso la Jerarquía de Chomsky?",
@@ -712,61 +628,6 @@ const BANCO_PREGUNTAS = [
   },
   {
     tema: "Lenguajes y Jerarquía de Chomsky",
-    pregunta: "¿Cuál es el tipo de gramática más restrictivo en la Jerarquía de Chomsky?",
-    opciones: [
-      "Tipo 0 (sin restricciones)",
-      "Tipo 1 (sensibles al contexto)",
-      "Tipo 2 (libres de contexto)",
-      "Tipo 3 (regulares)"
-    ],
-    correcta: 3
-  },
-  {
-    tema: "Lenguajes y Jerarquía de Chomsky",
-    pregunta: "Los lenguajes regulares corresponden al tipo:",
-    opciones: [
-      "Tipo 0",
-      "Tipo 1",
-      "Tipo 2",
-      "Tipo 3"
-    ],
-    correcta: 3
-  },
-  {
-    tema: "Lenguajes y Jerarquía de Chomsky",
-    pregunta: "¿Qué autómata reconoce los lenguajes libres de contexto (Tipo 2)?",
-    opciones: [
-      "Autómata Finito",
-      "Autómata de Pila",
-      "Máquina de Turing",
-      "Autómata Lineal Acotado"
-    ],
-    correcta: 1
-  },
-  {
-    tema: "Lenguajes y Jerarquía de Chomsky",
-    pregunta: "¿Qué autómata reconoce los lenguajes regulares (Tipo 3)?",
-    opciones: [
-      "Máquina de Turing",
-      "Autómata de Pila",
-      "Autómata Finito",
-      "Autómata Lineal Acotado"
-    ],
-    correcta: 2
-  },
-  {
-    tema: "Lenguajes y Jerarquía de Chomsky",
-    pregunta: "Las gramáticas de Tipo 0 generan lenguajes:",
-    opciones: [
-      "Regulares",
-      "Libres de contexto",
-      "Recursivamente enumerables (sin restricción)",
-      "Solo finitos"
-    ],
-    correcta: 2
-  },
-  {
-    tema: "Lenguajes y Jerarquía de Chomsky",
     pregunta: "Un lenguaje regular puede describirse con:",
     opciones: [
       "Una expresión regular",
@@ -786,50 +647,6 @@ const BANCO_PREGUNTAS = [
       "El lenguaje de cadenas que contienen '00'"
     ],
     correcta: 1
-  },
-  {
-    tema: "Lenguajes y Jerarquía de Chomsky",
-    pregunta: "Las gramáticas libres de contexto (Tipo 2) se usan para describir:",
-    opciones: [
-      "La estructura léxica de los lenguajes de programación",
-      "La sintaxis (estructura gramatical) de los lenguajes de programación",
-      "Solo lenguajes naturales humanos",
-      "El comportamiento de los procesadores"
-    ],
-    correcta: 1
-  },
-  {
-    tema: "Lenguajes y Jerarquía de Chomsky",
-    pregunta: "¿Qué relación existe entre los tipos en la Jerarquía de Chomsky?",
-    opciones: [
-      "Son conjuntos disjuntos que no se relacionan",
-      "Los de tipo menor contienen a los de tipo mayor (Tipo 3 ⊂ Tipo 2 ⊂ Tipo 1 ⊂ Tipo 0)",
-      "Todos son equivalentes",
-      "Los de tipo mayor contienen a los de tipo menor"
-    ],
-    correcta: 1
-  },
-  {
-    tema: "Lenguajes y Jerarquía de Chomsky",
-    pregunta: "¿Qué autómata reconoce los lenguajes sensibles al contexto (Tipo 1)?",
-    opciones: [
-      "Autómata Finito",
-      "Autómata de Pila",
-      "Autómata Lineal Acotado",
-      "Máquina de Turing"
-    ],
-    correcta: 2
-  },
-  {
-    tema: "Lenguajes y Jerarquía de Chomsky",
-    pregunta: "Una gramática regular (Tipo 3) tiene producciones de la forma:",
-    opciones: [
-      "A → α B o A → α (lineal derecha) o A → B α (lineal izquierda)",
-      "A → α donde α puede ser cualquier cadena",
-      "αAβ → αγβ",
-      "Cualquier forma sin restricciones"
-    ],
-    correcta: 0
   },
   {
     tema: "Lenguajes y Jerarquía de Chomsky",
@@ -897,21 +714,9 @@ const BANCO_PREGUNTAS = [
     ],
     correcta: 1
   },
-  {
-    tema: "Lenguajes y Jerarquía de Chomsky",
-    pregunta: "¿Qué es la cerradura de Kleene (Σ*) de un alfabeto Σ?",
-    opciones: [
-      "El conjunto de todas las cadenas de longitud exactamente uno",
-      "El conjunto de todas las cadenas posibles de cualquier longitud sobre Σ, incluyendo ε",
-      "El complemento del lenguaje",
-      "El conjunto de símbolos del alfabeto ordenados"
-    ],
-    correcta: 1
-  },
 
-  // ══════════════════════════════════════════════
   // TEMA 5: Transformaciones entre AFD y AFND
-  // ══════════════════════════════════════════════
+
   {
     tema: "Transformaciones AFD ↔ AFND",
     pregunta: "¿Es posible convertir cualquier AFND en un AFD equivalente?",
@@ -922,39 +727,6 @@ const BANCO_PREGUNTAS = [
       "Solo si el AFND tiene menos de 10 estados"
     ],
     correcta: 1
-  },
-  {
-    tema: "Transformaciones AFD ↔ AFND",
-    pregunta: "¿Cómo se llama el algoritmo clásico para convertir un AFND en AFD?",
-    opciones: [
-      "Algoritmo de Kleene",
-      "Construcción de subconjuntos (subset construction)",
-      "Algoritmo de Hopcroft",
-      "Algoritmo de Thompson"
-    ],
-    correcta: 1
-  },
-  {
-    tema: "Transformaciones AFD ↔ AFND",
-    pregunta: "En la construcción de subconjuntos, los estados del AFD resultante son:",
-    opciones: [
-      "Los mismos estados del AFND",
-      "Subconjuntos del conjunto de estados del AFND",
-      "Solo los estados de aceptación del AFND",
-      "Los estados del AFND duplicados"
-    ],
-    correcta: 1
-  },
-  {
-    tema: "Transformaciones AFD ↔ AFND",
-    pregunta: "Si un AFND tiene n estados, ¿cuántos estados puede tener en el peor caso el AFD equivalente?",
-    opciones: [
-      "n estados",
-      "2n estados",
-      "2ⁿ estados (potencia de 2)",
-      "n² estados"
-    ],
-    correcta: 2
   },
   {
     tema: "Transformaciones AFD ↔ AFND",
@@ -980,17 +752,6 @@ const BANCO_PREGUNTAS = [
   },
   {
     tema: "Transformaciones AFD ↔ AFND",
-    pregunta: "Al convertir un AFND-ε a AFD, el primer paso es calcular:",
-    opciones: [
-      "Los estados de aceptación del AFND",
-      "La cerradura épsilon del estado inicial",
-      "La tabla de transiciones directamente",
-      "El alfabeto del AFND"
-    ],
-    correcta: 1
-  },
-  {
-    tema: "Transformaciones AFD ↔ AFND",
     pregunta: "Un estado del AFD construido es de aceptación si:",
     opciones: [
       "Contiene al estado inicial del AFND",
@@ -1010,28 +771,6 @@ const BANCO_PREGUNTAS = [
       "Porque el AFND no puede reconocer lenguajes regulares"
     ],
     correcta: 1
-  },
-  {
-    tema: "Transformaciones AFD ↔ AFND",
-    pregunta: "¿Se pierde expresividad al convertir un AFND a AFD?",
-    opciones: [
-      "Sí, el AFD puede aceptar menos cadenas",
-      "No, el AFD resultante acepta exactamente el mismo lenguaje",
-      "Depende del tamaño del alfabeto",
-      "Sí, se pierden las transiciones épsilon permanentemente"
-    ],
-    correcta: 1
-  },
-  {
-    tema: "Transformaciones AFD ↔ AFND",
-    pregunta: "El algoritmo de Thompson se usa para:",
-    opciones: [
-      "Convertir AFD a AFND",
-      "Minimizar un AFD",
-      "Convertir una expresión regular a un AFND-ε",
-      "Convertir una gramática libre de contexto a AFD"
-    ],
-    correcta: 2
   },
   {
     tema: "Transformaciones AFD ↔ AFND",
@@ -1131,6 +870,128 @@ const BANCO_PREGUNTAS = [
       "El AFD es el único modelo útil en la práctica"
     ],
     correcta: 1
-  }
+  },
+
+  //TEMA:6 Automata de pila 
+
+  {
+    tema: "Autómata de Pila",
+    pregunta: "¿Qué estructura de memoria utiliza un autómata de pila?",
+    opciones: [
+      "Una cola",
+      "Una pila",
+      "Un árbol",
+      "Una lista enlazada"
+    ],
+    correcta: 1
+  },
+
+  {
+    tema: "Autómata de Pila",
+    pregunta: "¿Qué característica distingue a un autómata de pila de un autómata finito?",
+    opciones: [
+      "Puede usar una pila como memoria",
+      "Tiene más estados",
+      "Lee dos símbolos al mismo tiempo",
+      "No posee estados de aceptación"
+    ],
+    correcta: 0
+  },
+
+  {
+    tema: "Autómata de Pila",
+    pregunta: "¿Qué tipo de lenguajes reconocen los autómatas de pila?",
+    opciones: [
+      "Lenguajes regulares",
+      "Lenguajes independientes del contexto",
+      "Lenguajes sensibles al contexto",
+      "Todos los lenguajes"
+    ],
+    correcta: 1
+  },
+
+  {
+    tema: "Autómata de Pila",
+    pregunta: "¿Cuál de los siguientes lenguajes puede ser reconocido por un autómata de pila?",
+    opciones: [
+      "{ aⁿbⁿ | n ≥ 0 }",
+      "{ aⁿbⁿcⁿ | n ≥ 0 }",
+      "{ aⁿbⁿcⁿdⁿ | n ≥ 0 }",
+      "{ aⁿbⁿcⁿdⁿeⁿ | n ≥ 0 }"
+    ],
+    correcta: 0
+  },
+
+  {
+    tema: "Autómata de Pila",
+    pregunta: "¿Cuál de los siguientes lenguajes NO puede ser reconocido por un autómata de pila?",
+    opciones: [
+      "{ aⁿbⁿ | n ≥ 0 }",
+      "{ wwᴿ | w ∈ {a,b}* }",
+      "{ aⁿbⁿcⁿ | n ≥ 0 }",
+      "{ (ab)ⁿ | n ≥ 0 }"
+    ],
+    correcta: 2
+  },
+
+  {
+    tema: "Autómata de Pila",
+    pregunta: "¿Qué operación agrega un símbolo a la pila?",
+    opciones: [
+      "Pop",
+      "Push",
+      "Peek",
+      "Read"
+    ],
+    correcta: 1
+  },
+
+  {
+    tema: "Autómata de Pila",
+    pregunta: "¿Qué operación elimina el elemento que está en la cima de la pila?",
+    opciones: [
+      "Push",
+      "Read",
+      "Pop",
+      "Insert"
+    ],
+    correcta: 2
+  },
+
+  {
+    tema: "Autómata de Pila",
+    pregunta: "En una pila, ¿qué elemento se puede acceder directamente?",
+    opciones: [
+      "El primero que ingresó",
+      "El del medio",
+      "El último que ingresó",
+      "Cualquier elemento"
+    ],
+    correcta: 2
+  },
+
+  {
+    tema: "Autómata de Pila",
+    pregunta: "¿Cuál de las siguientes cadenas pertenece al lenguaje { aⁿbⁿ | n ≥ 1 }?",
+    opciones: [
+      "aaabbb",
+      "aabbb",
+      "aaabb",
+      "abbb"
+    ],
+    correcta: 0
+  },
+
+  {
+    tema: "Autómata de Pila",
+    pregunta: "¿Cuál de las siguientes cadenas NO pertenece al lenguaje { aⁿbⁿ | n ≥ 1 }?",
+    opciones: [
+      "ab",
+      "aabb",
+      "aaabbb",
+      "aabbb"
+    ],
+    correcta: 3
+  },
 
 ];
