@@ -3,6 +3,24 @@
 // ESTADO GLOBAL DEL JUEGO
 
 /** Estado completo de la partida */
+
+// ══════════════════════════════════════════════
+// MÚSICA DE FONDO
+// ══════════════════════════════════════════════
+const musica = new Audio('audio/musica.mp3');
+musica.loop = true;
+musica.volume = 0.4;
+
+const iniciarMusica = () => {
+  musica.currentTime = 0;
+  musica.play().catch(() => {});
+};
+
+const detenerMusica = () => {
+  musica.pause();
+  musica.currentTime = 0;
+};
+
 const estado = {
   jugadores: ['', ''],        // nombres de los jugadores
   turnoActual: 0,             // índice del jugador en turno (0 o 1)
@@ -483,6 +501,8 @@ const iniciarPartida = () => {
   crearTablero();
   actualizarUI();
 
+  iniciarMusica();
+
   mostrarPantalla('juego');
 };
 
@@ -540,6 +560,7 @@ inputJ2.addEventListener('input', () => {
 btnReiniciar.addEventListener('click', reiniciarPartida);
 
 btnMenuJuego.addEventListener('click', () => {
+    detenerMusica();
   cerrarModales();
   mostrarPantalla('menu');
 });
@@ -575,8 +596,10 @@ btnJugarNuevo.addEventListener('click', () => {
   mostrarPantalla('juego');
 });
 
-btnMenuResult.addEventListener('click', () => mostrarPantalla('menu'));
-
+btnMenuResult.addEventListener('click', () => {
+  detenerMusica();
+  mostrarPantalla('menu');
+});
 // INICIO DE LA APLICACIÓN
 
 
@@ -584,16 +607,9 @@ btnMenuResult.addEventListener('click', () => mostrarPantalla('menu'));
 const init = () => {
   mostrarPantalla('menu');
 };
-/**
-const musica = document.getElementById("musica");
 
-function reproducirMusica() {
-    musica.play();
-}
 
-function pausarMusica() {
-    musica.pause();
-}
 
-*/
+
+
 init();
