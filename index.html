@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- ======== FONDO DECORATIVO ======== -->
+  <!--  FONDO DECORATIVO  -->
   <div class="bg-decoration" aria-hidden="true">
     <span class="paw"></span>
     <span class="paw"></span>
@@ -27,8 +27,8 @@
   <section id="pantalla-menu" class="pantalla activa">
     <div class="menu-container">
       <div class="logo-block">
-<div class="cat-icon" aria-hidden="true">
-  <img src="imagenes/cat.png" alt="Gato" />
+  <div class="cat-icon" aria-hidden="true">
+    <img src="imagenes/cat.png" alt="Gato" />
 </div>
         <p class="logo-subtitle">Tres en Raya · Teoría de la Computación</p>
       </div>
@@ -55,7 +55,7 @@
     </div>
   </section>
 
-  <!-- ======== PANTALLA 2: INGRESO DE JUGADORES ======== -->
+  <!--  PANTALLA 2: INGRESO DE JUGADORES  -->
   <section id="pantalla-jugadores" class="pantalla">
     <div class="card jugadores-card">
       <button class="btn-back" id="btn-back-menu" aria-label="Volver al menú">← Volver</button>
@@ -99,7 +99,7 @@
     </div>
   </section>
 
-  <!-- ======== PANTALLA 3: JUEGO ======== -->
+  <!--  PANTALLA 3: JUEGO -->
   <section id="pantalla-juego" class="pantalla">
     <div class="game-layout">
 
@@ -154,7 +154,13 @@
     </div>
   </section>
 
-  <!-- ======== PANTALLA 4: RESULTADO FINAL ======== -->
+  <!-- MUSICA-->
+
+    <audio id="musica" autoplay loop>
+      <source src="audio/musica.mp3" type="audio/mp3">
+  </audio>
+  
+  <!--  PANTALLA 4: RESULTADO FINAL  -->
   <section id="pantalla-resultado" class="pantalla">
     <div class="card resultado-card">
       <div class="result-emoji" id="result-emoji" aria-hidden="true">🏆</div>
@@ -179,7 +185,7 @@
     </div>
   </section>
 
-  <!-- ======== MODAL: PREGUNTA ======== -->
+  <!--  VENTANA EMERGENTE: PREGUNTA  -->
   <div id="modal-pregunta" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-tema" hidden>
     <div class="modal-card">
       <div class="modal-header">
@@ -200,7 +206,7 @@
     </div>
   </div>
 
-  <!-- ======== MODAL: REGLAS ======== -->
+  <!--  MODAL: REGLAS -->
   <div id="modal-reglas" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="reglas-title" hidden>
     <div class="modal-card modal-info">
       <h3 class="modal-info-title" id="reglas-title">📖 Reglas del juego</h3>
@@ -216,7 +222,7 @@
     </div>
   </div>
 
-  <!-- ======== MODAL: CRÉDITOS ======== -->
+  <!--  PANTALLA: CRÉDITOS  -->
   <div id="modal-creditos" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="creditos-title" hidden>
     <div class="modal-card modal-info">
       <h3 class="modal-info-title" id="creditos-title"> Créditos</h3>
@@ -225,7 +231,7 @@
         <p><strong>Tik-Flap</strong></p>
         <p>Proyecto final · Teoría de la Computación</p>
         <br/>
-        <p>Desarrollado con HTML, CSS y JavaScript puro.</p>
+        <p>Desarrollado con HTML, CSS y JavaScript .</p>
         <p>Heydy castillo· Angelica Huaman</p>
         <br/>
         <p> Hecho con mucho amor felino </p>
@@ -234,7 +240,7 @@
     </div>
   </div>
 
-  <!-- ======== TOAST NOTIFICACIÓN ======== -->
+  <!--  NOTIFICACIÓN -->
   <div id="toast" class="toast" role="alert" aria-live="assertive" aria-hidden="true"></div>
 
   <!-- Scripts -->

@@ -1,11 +1,6 @@
 /**
- * script.js — Lógica principal de Tik-Flap
- * Juego: Tres en Raya con preguntas de Teoría de la Computación
- */
 
-// ══════════════════════════════════════════════
 // ESTADO GLOBAL DEL JUEGO
-// ══════════════════════════════════════════════
 
 /** Estado completo de la partida */
 const estado = {
@@ -46,9 +41,7 @@ const manejadorPreguntas = (() => {
   return { reiniciarMazo, siguientePregunta, getPreguntaActual, setOpcion, getOpcion };
 })();
 
-// ══════════════════════════════════════════════
 // REFERENCIAS AL DOM
-// ══════════════════════════════════════════════
 
 const pantallas = {
   menu:      document.getElementById('pantalla-menu'),
@@ -114,9 +107,9 @@ const btnMenuResult  = document.getElementById('btn-menu-resultado');
 // Toast
 const toastEl = document.getElementById('toast');
 
-// ══════════════════════════════════════════════
+
 // NAVEGACIÓN ENTRE PANTALLAS
-// ══════════════════════════════════════════════
+
 
 /**
  * Muestra la pantalla indicada y oculta el resto.
@@ -126,6 +119,8 @@ const mostrarPantalla = (nombre) => {
   Object.values(pantallas).forEach(p => p.classList.remove('activa'));
   pantallas[nombre].classList.add('activa');
 };
+
+
 
 /**
  * Abre un modal quitando el atributo `hidden`.
@@ -143,9 +138,9 @@ const cerrarModales = () => {
   Object.values(modales).forEach(m => m.setAttribute('hidden', ''));
 };
 
-// ══════════════════════════════════════════════
+
 // TOAST (NOTIFICACIONES)
-// ══════════════════════════════════════════════
+
 
 let toastTimeout = null;
 
@@ -168,9 +163,7 @@ const mostrarToast = (mensaje, tipo = '') => {
   }, 2800);
 };
 
-// ══════════════════════════════════════════════
 // TABLERO
-// ══════════════════════════════════════════════
 
 /** Crea las 9 celdas del tablero en el DOM */
 const crearTablero = () => {
@@ -206,9 +199,9 @@ const renderizarTablero = () => {
   });
 };
 
-// ══════════════════════════════════════════════
+
 // LÓGICA DEL JUEGO
-// ══════════════════════════════════════════════
+
 
 /** Líneas ganadoras (índices del tablero) */
 const LINEAS_GANADORAS = [
@@ -314,10 +307,8 @@ const resaltarGanador = (linea) => {
   renderizarTablero();
 };
 
-// ══════════════════════════════════════════════
-// MODAL DE PREGUNTA
-// ══════════════════════════════════════════════
 
+// MODAL DE PREGUNTA
 /** Muestra el modal con una nueva pregunta aleatoria */
 const mostrarModalPregunta = () => {
   const pregunta = manejadorPreguntas.siguientePregunta();
@@ -410,9 +401,8 @@ const validarRespuesta = () => {
   }, 1400);
 };
 
-// ══════════════════════════════════════════════
 // PANTALLA DE RESULTADO
-// ══════════════════════════════════════════════
+
 
 /**
  * Muestra la pantalla de resultado final.
@@ -441,9 +431,8 @@ const mostrarResultado = (simboloGanador) => {
   mostrarPantalla('resultado');
 };
 
-// ══════════════════════════════════════════════
+
 // INICIALIZACIÓN DEL JUEGO
-// ══════════════════════════════════════════════
 
 /**
  * Inicia una nueva partida con los nombres dados.
@@ -512,9 +501,9 @@ const reiniciarPartida = () => {
   mostrarToast(' Partida reiniciada. ¡A jugar!', '');
 };
 
-// ══════════════════════════════════════════════
+
 // REGISTRO DE EVENTOS
-// ══════════════════════════════════════════════
+
 
 // ── Menú principal ──
 btnJugar.addEventListener('click', () => mostrarPantalla('jugadores'));
@@ -588,13 +577,23 @@ btnJugarNuevo.addEventListener('click', () => {
 
 btnMenuResult.addEventListener('click', () => mostrarPantalla('menu'));
 
-// ══════════════════════════════════════════════
 // INICIO DE LA APLICACIÓN
-// ══════════════════════════════════════════════
+
 
 /** Muestra la pantalla inicial */
 const init = () => {
   mostrarPantalla('menu');
 };
+/**
+const musica = document.getElementById("musica");
 
+function reproducirMusica() {
+    musica.play();
+}
+
+function pausarMusica() {
+    musica.pause();
+}
+
+*/
 init();
